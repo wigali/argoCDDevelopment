@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: myapp
+  name: argocdDevnamespace
 spec:
   selector:
     matchLabels:
-      app: myapp
+      app: argocdDevnamespace
   replicas: 2
   template:
     metadata:
       labels:
-        app: myapp
+        app: argocdDevnamespace
     spec:
       containers:
-      - name: myapp
+      - name: argocdDevnamespace
         image: wilsonggr/my-spring-boot-app
         ports:
         - containerPort: 8080
