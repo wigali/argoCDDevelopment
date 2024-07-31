@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: myargoapp
+  name: guestbook-ui
 spec:
   selector:
     matchLabels:
-      app: myargoapp
+      app: guestbook-ui
   replicas: 2
   template:
     metadata:
       labels:
-        app: myargoapp
+        app: guestbook-ui
     spec:
       containers:
-      - name: myargoapp
+      - name: guestbook-ui
         image: wilsonggr/my-spring-boot-app
         ports:
         - containerPort: 8080

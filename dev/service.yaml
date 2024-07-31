@@ -1,10 +1,10 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: argocd-app-service
+  name: guestbook-ui
 spec:
   selector:
-    app: myargoapp
+    app: guestbook-ui
   ports:
   - port: 8080
     protocol: TCP
