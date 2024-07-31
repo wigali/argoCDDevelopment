@@ -8,4 +8,4 @@ spec:
     targetPort: 8080
   selector:
     app: test-dev-argocd
-  type: NodePort
+  #type: NodePort
