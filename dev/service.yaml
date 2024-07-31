@@ -17,13 +17,13 @@ metadata:
   name: my-ingress
 spec:
   rules:
-    - host: my-app.example.com
+    - host: test-dev-argocd.example.com
       http:
         paths:
           - path: /
             pathType: Prefix
             backend:
               service:
-                name: my-service
+                name: test-dev-argocd
                 port:
                   number: 80
