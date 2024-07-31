@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: test-dev-argocd
+  name: test-argocd-service
 spec:
   selector:
     matchLabels:
-      app: test-dev-argocd
+      app: test-argocd-service
   replicas: 2
   template:
     metadata:
       labels:
-        app: test-dev-argocd
+        app: test-argocd-service
     spec:
       containers:
-      - name: test-dev-argocd
+      - name: test-argocd-service
         image: wilsonggr/my-spring-boot-app
         ports:
-        - containerPort: 8080
+        - containerPort: 3000
