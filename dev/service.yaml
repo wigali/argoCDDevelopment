@@ -4,8 +4,8 @@ metadata:
   name: test-argocd-service
 spec:
   ports:
-  - port: 8080
-    targetPort: 8080
+  - port: 8082
+    targetPort: 8082
   selector:
     app: test-argocd-service
   #type: NodePort
