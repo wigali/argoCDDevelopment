@@ -3,10 +3,11 @@ kind: Deployment
 metadata:
   name: guestbook-ui
 spec:
+  revisionHistoryLimit: 3
+  progressDeadlineSeconds: 30
   selector:
     matchLabels:
       app: guestbook-ui
-  replicas: 2
   template:
     metadata:
       labels:
@@ -15,6 +16,9 @@ spec:
       containers:
       - name: guestbook-ui
         image: wilsonggr/my-spring-boot-app
+         resources:
+          requests:
+            cpu: 100m
+            memory: 100Mi
         ports:
-        - containerPort: 8080
-
+        - containerPort: 80
