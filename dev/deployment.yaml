@@ -1,22 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: test-dev
+  name: test-dev-argocd
 spec:
   selector:
     matchLabels:
-      app: guestbook-ui
+      app: test-dev-argocd
+  replicas: 2
   template:
     metadata:
       labels:
-        app: guestbook-ui
+        app: test-dev-argocd
     spec:
       containers:
-      - name: guestbook-ui
+      - name: test-dev-argocd
         image: wilsonggr/my-spring-boot-app
-         resources:
-          requests:
-            cpu: 100m
-            memory: 100Mi
         ports:
-        - containerPort: 80
+        - containerPort: 8080

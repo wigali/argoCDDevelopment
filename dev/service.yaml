@@ -1,11 +1,11 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: guestbook-ui
+  name: test-dev-argocd
 spec:
   ports:
   - port: 8080
     targetPort: 8080
   selector:
-    app: guestbook-ui
+    app: test-dev-argocd
   type: NodePort
