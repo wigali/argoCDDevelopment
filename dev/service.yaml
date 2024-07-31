@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: myargoapp-service
+  name: argocd-app-service
 spec:
   selector:
     app: myargoapp
