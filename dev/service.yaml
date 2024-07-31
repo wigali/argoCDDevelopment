@@ -9,3 +9,21 @@ spec:
   selector:
     app: test-dev-argocd
   #type: NodePort
+
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: my-ingress
+spec:
+  rules:
+    - host: my-app.example.com
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: my-service
+                port:
+                  number: 80
