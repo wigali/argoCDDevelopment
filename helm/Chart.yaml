@@ -1,0 +1,7 @@
+apiVersion: v1
+name: helm-test-argocd
+description: The proxy Helm Chart targeting the ovia-prerequisites-syncers Helm chart
+version: 0.0.0
+dependencies:
+  - name: helm-test-argocd
+    repository: wilsonggr/my-spring-boot-app
