@@ -4,4 +4,4 @@ description: The proxy Helm Chart targeting the ovia-prerequisites-syncers Helm 
 version: 0.0.0
 dependencies:
   - name: my-spring-boot-app
-    repository: wilsonggr
+    repository: https://github.com/wigali/argoCDDevelopment
